@@ -20,10 +20,12 @@ app.get("/:date", (req, res) => {
   let parsedDate = new Date(dateToParse);
   if (parsedDate) {
     time.unix = parsedDate.getTime();
-    let month = 
+    let month = months[parsedDate.getMonth()];
+    let natural = month + ' ' + parsedDate.getDate() + ', ' + parsedDate.getFullYear();
+    time.natural = natural;
   }
   
   res.send(JSON.stringify(time));
 });
 
-var listener = app.listen(process.env.PORT, () => console.log('listening on port: ' + process.env.PORT));
+let listener = app.listen(process.env.PORT, () => console.log('listening on port: ' + process.env.PORT));

@@ -7,25 +7,28 @@
     <body>
         <div class="container">
             <h1 class="header">
-                API Basejump: Timestamp microservice
+                API Basejump: Timestamp Microservice
             </h1>
-            <blockquote>
-                User stories:
-                <ul>1) I can pass a string as a parameter, and it will check to see whether that string 
-                contains either a unix timestamp or a natural language date (example: January 1, 2016)</ul>
-                <ul>2) If it does, it returns both the Unix timestamp and the natural language form of that date.</ul>
-                <ul>3) If it does not contain a date or Unix timestamp, it returns null for those properties.</ul>
-            </blockquote>
             <h3>Example usage:</h3>
-            <code>https://timestamp-ms.herokuapp.com/December%2015,%202015</code><br>
-            <code>https://timestamp-ms.herokuapp.com/1450137600</code>
+            <code class="needs-link">December%2015,%202015</code><br>
+            <code class="needs-link">1450137600000</code>
             <h3>Example output:</h3>
             <code>
                 {
-                  "unix": 1450137600,
+                  "unix": 1450137600000,
                   "natural": "December 15, 2015"
                 }
             </code>
         </div>
+      <script type="text/javascript">
+          var link = window.location.href;
+          var needsLink = document.getElementsByClassName('needs-link');
+          var i =
+          for (var i = 0; i < needsLink.length; i++) {
+              var e = needsLink[i];
+              e.innerHTML = link + e.innerHTML;
+              e.classList.remove('needs-link');
+          }
+      </script>
     </body>
 </html>
