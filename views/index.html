@@ -1,17 +1,21 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Timestamp microservice</title>
+        <title>Timestamp Microservice</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="container">
             <h1 class="header">
-                API Basejump: Timestamp Microservice
+                Timestamp Microservice
             </h1>
             <h3>Example usage:</h3>
-            <code class="needs-link">December%2015,%202015</code><br>
-            <code class="needs-link">1450137600000</code>
+            <code class="needs-link">/December%2015,%202015</code><br>
+            <code class="needs-link">/1450137600000</code>
             <h3>Example output:</h3>
             <code>
                 {
@@ -20,15 +24,6 @@
                 }
             </code>
         </div>
-      <script type="text/javascript">
-          var link = window.location.href;
-          var needsLink = document.getElementsByClassName('needs-link');
-          var i =
-          for (var i = 0; i < needsLink.length; i++) {
-              var e = needsLink[i];
-              e.innerHTML = link + e.innerHTML;
-              e.classList.remove('needs-link');
-          }
-      </script>
+        <script type="text/javascript" src="client.js"></script>
     </body>
 </html>
