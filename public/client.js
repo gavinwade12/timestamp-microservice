@@ -1,8 +1,7 @@
 $(function() {
-  console.log('hello');
-  var link = window.location.href.trimRight('/');
-  console.log(link);
+  var link = window.location.href.replace(/\/$/, '');
   $('.needs-link').each(function(i, e) {
+    e = $(e);
     e.text(link + e.text());
     e.removeClass('needs-link');
   });
